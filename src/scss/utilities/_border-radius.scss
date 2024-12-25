@@ -1,0 +1,13 @@
+@use '../abstracts/' as *;
+@layer utilities {
+  .border-radius {
+    border-radius: initial;
+  }
+  .radius-round {
+    border-radius: var(--border-radius-round);
+  }
+  .border-start-start-radius { border-start-start-radius: initial; } /* border-top-left-radius */
+	.border-start-end-radius { border-start-end-radius: initial; } /* border-top-right-radius */
+	.border-end-end-radius { border-end-end-radius: initial; } /* border-bottom-right-radius */
+	.border-end-start-radius { border-end-start-radius: initial; } /* border-bottom-left-radius */
+}

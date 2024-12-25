@@ -1,0 +1,81 @@
+@use '../abstracts/' as *;
+@layer components {
+  .button {
+    --button-accent-color: initial;
+    --button-text-color: initial;
+    --button-light-surface-color: var(--surface-color-0);
+    --button-dark-surface-color: var(--surface-color-3);
+    --button-surface-color: var(--button-light-surface-color);
+    --button-border-color: var(--surface-color-3);
+    --button-highlight-size: 0;
+    --button-light-highlight-color: var(--gray-5);
+    --button-dark-highlight-color: var(--gray-12);
+    --button-highlight-color: var(--button-light-highlight-color);
+    --button-ink-shadow-light: 0 1px 0 oklch(var(--gray-3));
+    --button-ink-shadow-dark: 0 1px 0 oklch(var(--surface-color-1));
+    --button-ink-shadow: var(--button-ink-shadow-light);
+    --button-icon-size: var(--relative-size-9);
+    --button-icon-color: var(--link-color);
+    @include in-block;
+    & {
+      padding-block: 1ex;
+			padding-inline: 2ex;
+			border-radius: var(--border-size-3);
+			border: var(--border-size-2) solid oklch(var(--button-border-color));
+			background-color: oklch(var(--button-surface-color));
+      box-shadow: 
+				var(--shadow-2),
+				0 1px oklch(var(--surface-color-3)),
+				0 0 0 var(--button-highlight-size) oklch(var(--button-highlight-color) / 25%);
+      text-shadow: var(--button-ink-shadow);
+      color: oklch(var(--button-text-color));
+      font-weight: var(--font-weight-700);
+      font-size: var(--button-font-size);
+      text-align: center;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      transition: border-color 0.5s var(--ease-3);
+    }
+    @include motion-ok {
+      transition: border-color .5s var(--ease-3), box-shadow 145ms var(--ease-4), outline-offset 145ms var(--ease-4);
+    }
+    @include OSdark {
+      --button-surface-color: var(--button-dark-surface-color);
+      --button-highlight-color: var(--button-dark-highlight-color);
+      --button-ink-shadow: var(--button-ink-shadow-dark);
+    }
+    &:is([circle-button]) {
+      padding: var(--size-5);
+      border-radius: var(--border-radius-round);
+    }
+    &:is([disabled]) {
+      --button-surface-color: none;
+      --button-text-color: var(--gray-6);
+      cursor: not-allowed;
+      box-shadow: var(--shadow-1);
+      @include OSdark {
+        --button-text-color: var(--gray-5);
+      }
+    }
+    &:is(:not(:active):hover) {
+      --button-highlight-size: var(--size-3);
+      transition-duration: 0.25s;
+    }
+    &:has(svg) {
+      @include in-flex;
+      & {
+        justify-content: center;
+        align-items: center;
+        gap: var(--size-4);
+        & >:where(svg) {
+          block-size: var(--button-icon-size);
+          inline-size: var(--button-icon-size);
+          aspect-ratio: var(--aspect-ratio-square);
+          flex-shrink: 0;
+          filter: drop-shadow(var(--button-ink-shadow));
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use 'colors';
+@layer themes {
+  :where([data-theme="sage"], .sage, .sage-theme) {
+    color-scheme: light;
+    --link-color: 70.72% 0.1679488624357663 242.04198289887938;
+    --link-visited-color: initial;
+    --brand-primary-color: initial;
+    --brand-secondary-color: initial;
+    --surface-color-0: var(--black-color);
+    --surface-color-1: 92.53% 0.011 225.99;
+    --surface-color-2: 99.33% 0.001 197.14;
+    --surface-color-3: 94.01% 0.007 233.64;
+    --surface-color-4: 88.53% 0.013 228.94;
+    --document-surface-color: var(--surface-color-2);
+    --text-color-1: 23.78% 0.05 235;
+    --text-color-2: 42.86% 0.043 230.77;
+    --scroll-thumb-color: var(--surface-4-color);
+  }
+}

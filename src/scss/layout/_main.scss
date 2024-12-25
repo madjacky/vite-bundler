@@ -1,0 +1,8 @@
+@use '../abstracts/' as *;
+@layer layout {
+  .main {
+    place-content: center !important;
+    place-items: center !important;
+    gap: var(--size-7) !important;
+  }
+}

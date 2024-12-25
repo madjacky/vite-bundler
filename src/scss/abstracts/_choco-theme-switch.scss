@@ -1,0 +1,19 @@
+@use 'colors';
+@layer themes {
+  :where([data-theme="choco"], .choco, .choco-theme) {
+    color-scheme: dark;
+    --link-color: var(--choco-5);
+    --link-visited-color: initial;
+    --brand-primary-color: initial;
+    --brand-secondary-color: initial;
+    --surface-color-0: var(--black-color);
+    --surface-color-1: var(--choco-12);
+    --surface-color-2: var(--choco-11);
+    --surface-color-3: var(--choco-10);
+    --surface-color-4: var(--choco-9);
+    --document-surface-color: var(--surface-color-2);
+    --text-color-1: var(--choco-1);
+    --text-color-2: var(--choco-2);
+    --scroll-thumb-color: var(--surface-4-color);
+  }
+}

@@ -1,0 +1,32 @@
+/* Browser-queries
+================================ */
+@mixin safariONLY {
+  @media (-apple-pay-button-style: inherit) {
+    @content;
+  }
+}
+@mixin webkitONLY {
+  @media (alt: inherit) and (not (-apple-pay-button-style: inherit)) {
+    @content;
+  }
+}
+@mixin firefoxONLY {
+  @media (-moz-appearance: inherit) {
+    @content;
+  }
+}
+@mixin firefoxMacONLY {
+  @media (-moz-osx-font-smoothing: inherit) {
+    @content;
+  }
+}
+@mixin chromeONLY {
+  @media (-webkit-app-region: inherit) and (not (container-type: none)) {
+    @content;
+  }
+}
+@mixin chromiumONLY {
+  @media (-webkit-app-region: inherit) and (container-type: none) {
+    @content;
+  }
+}

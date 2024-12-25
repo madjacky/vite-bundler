@@ -1,0 +1,7 @@
+@use '../abstracts/' as *;
+@layer utilities {
+  .centered-vertical {
+    text-align: center;
+    align-content: center;
+  }
+}

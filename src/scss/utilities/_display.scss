@@ -1,0 +1,69 @@
+@use '../abstracts/' as *;
+@layer utilities {
+  .d-block {
+    @include d-block;
+  }
+  .in-block {
+    @include in-block;
+  }
+  .flex {
+    @include flex;
+  }
+  .flex-wrap {
+    @include flex-wrap;
+  }
+  .flex-wrap-v-center {
+    @include flex-wrap-v-center;
+  }
+  .flex-center {
+    @include flex-center;
+  }
+  .flex-v-center {
+    @include flex-v-center;
+  }
+  .flex-h-center {
+    @include flex-h-center;
+  }
+  .flex-sb {
+    @include flex-sb;
+  }
+  .flex-v-center-sb {
+    @include flex-v-center-sb;
+  }
+  .flex-column {
+    @include flex-column;
+  }
+  .flex-column-center {
+    @include flex-column-center;
+  }
+  .flex-column-v-center {
+    @include flex-column-v-center;
+  }
+  .flex-column-h-center {
+    @include flex-column-h-center;
+  }
+  .in-flex {
+    @include in-flex;
+  }
+  .in-flex-center {
+    @include in-flex-center;
+  }
+  .grid {
+    @include grid;
+  }
+  .grid-center {
+    @include grid-center;
+  }
+  .in-grid {
+    @include in-grid;
+  }
+  .in-grid-center {
+    @include in-grid-center;
+  }
+  .grid-holy-grail {
+    @include grid-holy-grail;
+  }
+  .grid-footer-sticky {
+    @include grid-footer-sticky;
+  }
+}

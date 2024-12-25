@@ -1,0 +1,10 @@
+@use '../abstracts/' as *;
+@layer utilities {
+  .container {
+    --_container-inline-size: var(--container-inline-size);
+    --_container-inline-offset: var(--container-inline-offset);
+    margin-inline: auto;
+    padding-inline: var(--_container-inline-offset);
+    max-inline-size: var(--_container-inline-size);
+  }
+}

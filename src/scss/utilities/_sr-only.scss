@@ -1,0 +1,13 @@
+@use '../abstracts/' as *;
+@layer utilities {
+  .sr-only {
+    position: absolute;
+		overflow: hidden;
+		margin: -0.0625rem;
+		border: 0;
+		padding: 0;
+		inline-size: 0.0625rem;
+		block-size: 0.0625rem;
+		clip: rect(0 0 0 0);
+  }
+}

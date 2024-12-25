@@ -1,0 +1,6 @@
+@use '../abstracts/' as *;
+@layer components {
+  .logo {
+    @include in-block;
+  }
+}

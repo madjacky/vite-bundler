@@ -1,0 +1,22 @@
+@use '../abstracts/' as *;
+@layer base {
+  .page {
+    background-color: oklch(var(--document-surface-color));
+		color: oklch(var(--text-color-1));
+		accent-color: oklch(var(--link-color));
+		caret-color: oklch(var(--link-color));
+		scrollbar-color: oklch(var(--scroll-thumb-color));
+    &__body {
+      @include grid-footer-sticky;
+      background-image:
+				radial-gradient(circle at center, oklch(var(--text-color-2) / 0), oklch(var(--document-surface-color))),
+				radial-gradient(circle at 1px 1px, oklch(var(--text-color-2) / .47) 1px, oklch(var(--text-color-2) / 0) 0);
+      background-size: 200px 200px, 40px 40px;
+      background-repeat: repeat;
+      font-family: var(--font-sans);
+      font-weight: var(--font-weight-400);
+      font-size: var(--font-size-2);
+      line-height: var(--font-line-height-7);
+    }
+  }
+}

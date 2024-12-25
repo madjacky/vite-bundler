@@ -1,0 +1,14 @@
+@use '../abstracts/' as *;
+@layer utilities {
+  .shadow-1 { box-shadow: var(--shadow-1); }
+  .shadow-2 { box-shadow: var(--shadow-2); }
+  .shadow-3 { box-shadow: var(--shadow-3); }
+  .shadow-4 { box-shadow: var(--shadow-4); }
+  .shadow-5 { box-shadow: var(--shadow-5); }
+  .shadow-6 { box-shadow: var(--shadow-6); }
+  .inner-shadow-1 { box-shadow: var(--inner-shadow-1); }
+  .inner-shadow-2 { box-shadow: var(--inner-shadow-2); }
+  .inner-shadow-3 { box-shadow: var(--inner-shadow-3); }
+  .inner-shadow-4 { box-shadow: var(--inner-shadow-4); }
+  .inner-shadow-5 { box-shadow: var(--inner-shadow-5); }
+}

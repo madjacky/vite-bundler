@@ -1,0 +1,21 @@
+@use 'vendors';
+@use 'base';
+@use 'pages';
+@use 'layout';
+@use 'utilities';
+@use 'components';
+
+@layer vendors,
+  reset,
+  colors,
+  motions,
+  sizes,
+  shadows,
+  themes,
+  typography,
+  design-system,
+  base,
+  pages,
+  layout,
+  utilities,
+  components;

@@ -1,0 +1,45 @@
+@use '../abstracts/' as *;
+@layer utilities {
+  .layout {
+    --_layout-inline-offset: var(--layout-inline-offset);
+    --_layout-content-inline-size: var(--layout-content-inline-size);
+    --_layout-breakout-max-inline-size: var(--layout-breakout-max-inline-size);
+    --_layout-breakout-inline-size: var(--layout-breakout-inline-size);
+    @include grid;
+    & {
+      grid-template-columns: 
+        [full-inline-size-start] minmax(var(--_layout-inline-offset), 1fr)
+        [breakout-inline-size-start] minmax(0, var(--_layout-breakout-inline-size))
+        [content-start] min(100% - (var(--_layout-inline-offset) * 2), var(--_layout-content-inline-size)) [content-end]
+        minmax(0, var(--_layout-breakout-inline-size)) [breakout-inline-size-end]
+        minmax(var(--_layout-inline-offset), 1fr) [full-inline-size-end];
+      &, [data-grid-layout="full-inline-size"] {
+        & > * {
+          grid-column: content;
+        }
+        & >:is([data-grid-layout="full-inline-size"]) {
+          @include grid;
+          & {
+            grid-template-columns: inherit;
+            grid-column: full-inline-size;
+          }
+        }
+        & >:is([data-grid-layout="full-inline-size-start"]) {
+          grid-column: full-inline-size-start / content-end;
+        }
+        & >:is([data-grid-layout="full-inline-size-end"]) {
+          grid-column: content-start / full-inline-size-end;
+        }
+        & >:is([data-grid-layout="breakout-inline-size"]) {
+          grid-column: breakout-inline-size;
+        }
+        & >:is([data-grid-layout="breakout-inline-size-start"]) {
+          grid-column: breakout-inline-size-start / content-end;
+        }
+        & >:is([data-grid-layout="breakout-inline-size-end"]) {
+          grid-column: content-start / breakout-inline-size-end;
+        }
+      }
+    }
+  }
+}

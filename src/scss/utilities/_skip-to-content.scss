@@ -1,0 +1,17 @@
+@use '../abstracts/' as *;
+@layer utilities {
+  .skip-to-content {
+    position: absolute;
+		margin-inline: auto;
+		padding-block: .5em;
+		padding-inline: 1em;
+		background-color: oklch(var(--pixel-8-minty-fresh-color));
+		color: oklch(var(--black-color));
+		z-index: 999;
+		transform: translateY(-100%);
+		transition: transform 250ms ease-in;
+		&:is(:focus) {
+			transform: translateY(0);
+		}
+  }
+}

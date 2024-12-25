@@ -1,0 +1,108 @@
+/* Motion-preference-queries
+================================ */
+@mixin motion-ok {
+  @media (prefers-reduced-motion: no-preference) {
+    @content;
+  }
+}
+@mixin motion-not-ok {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+
+/* Transparency-preference-Queries
+==================================== */
+@mixin opacity-ok {
+  @media (prefers-reduced-transparency: no-preference) {
+    @content;
+  }
+}
+@mixin opacity-not-ok {
+  @media (prefers-reduced-transparency: reduce) {
+    @content;
+  }
+}
+
+/* Data-usage-preference-Queries
+================================ */
+@mixin use-data-ok {
+  @media (prefers-reduced-data: no-preference) {
+    @content;
+  }
+}
+@mixin use-data-not-ok {
+  @media (prefers-reduced-data: reduce) {
+    @content;
+  }
+}
+
+/* Contrast-reference-Queries
+================================ */
+@mixin high-contrast {
+  @media (prefers-contrast: more) {
+    @content;
+  }
+}
+@mixin low-contrast {
+  @media (prefers-contrast: less) {
+    @content;
+  }
+}
+
+/* Forced-colors-Queries
+================================ */
+@mixin forced-colors {
+  @media (forced-colors: active) {
+    @content;
+  }
+}
+
+/* Device-orientation-Queries
+================================ */
+@mixin portrait {
+  @media (orientation: portrait) {
+    @content;
+  }
+}
+@mixin landscape {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
+
+/* Touch-pointers-Queries
+================================ */
+@mixin touch {
+  @media (hover: none) and (pointer: coarse) {
+    @content;
+  }
+}
+@mixin stylus {
+  @media (hover: none) and (pointer: fine) {
+    @content;
+  }
+}
+@mixin pointer {
+  @media (hover) and (pointer: coarse) {
+    @content;
+  }
+}
+@mixin mouse {
+  @media (hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+/* prefers-color-scheme
+================================ */
+@mixin OSlight {
+  @media (prefers-color-scheme: light) {
+    @content;
+  }
+}
+@mixin OSdark {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}

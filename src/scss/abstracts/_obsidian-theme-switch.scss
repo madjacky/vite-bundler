@@ -1,0 +1,19 @@
+@use 'colors';
+@layer themes {
+  :where([data-theme="obsidian"], .obsidian, .obsidian-theme) {
+    color-scheme: dark;
+    --link-color: 47.53% 0.075 234.04;
+    --link-visited-color: initial;
+    --brand-primary-color: initial;
+    --brand-secondary-color: initial;
+    --surface-color-0: var(--black-color);
+    --surface-color-1: 21.54% 0.006 236.85;
+    --surface-color-2: 27.17% 0.009 219.82;
+    --surface-color-3: 32.19% 0.007 229.03;
+    --surface-color-4: 37.23% 0.006 228.98;
+    --document-surface-color: var(--surface-color-2);
+    --text-color-1: 88.62% 0.01 222.07;
+    --text-color-2: 72.45% 0.008 228.9;
+    --scroll-thumb-color: var(--surface-4-color);
+  }
+}

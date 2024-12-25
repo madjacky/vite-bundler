@@ -1,0 +1,19 @@
+@use 'colors';
+@layer themes {
+  :where([data-theme="matte"], .matte, .matte-theme) {
+    color-scheme: dark;
+    --link-color: 57.44% 0.122 238.11;
+    --link-visited-color: initial;
+    --brand-primary-color: initial;
+    --brand-secondary-color: initial;
+    --surface-color-0: var(--black-color);
+    --surface-color-1: 32.35% 0.011 225.42;
+    --surface-color-2: 37.24% 0.014 226.34;
+    --surface-color-3: 42.01% 0.007 223.58;
+    --surface-color-4: 46.69% 0.009 229.01;
+    --document-surface-color: var(--surface-color-2);
+    --text-color-1: 80.69% 0.017 233.08;
+    --text-color-2: 69.41% 0.017 227.08;
+    --scroll-thumb-color: var(--surface-4-color);
+  }
+}

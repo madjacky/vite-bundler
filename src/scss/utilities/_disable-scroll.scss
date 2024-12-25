@@ -1,0 +1,12 @@
+@use '../abstracts/' as *;
+@layer utilities {
+  .disable-scroll {
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    overflow: hidden;
+    block-size: 100svb;
+    inline-size: 100%;
+    overscroll-behavior: none;
+  }
+}

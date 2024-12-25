@@ -1,0 +1,7 @@
+@use '../abstracts/' as *;
+@layer utilities {
+  .wrapper {
+		margin-inline: auto;
+		inline-size: var(--wrapper-inline-size);
+	}	
+}
