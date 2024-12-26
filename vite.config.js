@@ -24,6 +24,9 @@ export default defineConfig({
     },
   },
   publicDir: '../assets',
+  css: {
+    postcss: './postcss.config.js',
+  },
   plugins: [
     injectHTML(),
   ],
