@@ -11,6 +11,28 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'src/index.html'),
       },
+      output: {
+        assetFileNames: (assetInfo) => {
+          // Handle CSS files
+          if (assetInfo.name.endsWith('.css')) {
+            return 'css/[name][extname]';
+          }
+          // Handle assets (images, fonts, videos)
+          const ext = assetInfo.name.split('.').pop();
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico|webp|avif/i.test(ext)) {
+            return 'assets/images/[name][extname]';
+          }
+          if (/woff2?|ttf|eot|otf/i.test(ext)) {
+            return 'assets/fonts/[name][extname]';
+          }
+          if (/mp4|webm|ogg|mp3|wav|flac|aac/i.test(ext)) {
+            return 'assets/video/[name][extname]';
+          }
+          return 'assets/[name][extname]';
+        },
+        entryFileNames: 'javascript/[name].js',
+        chunkFileNames: 'javascript/[name].js',
+      },
     },
   },
   resolve: {
